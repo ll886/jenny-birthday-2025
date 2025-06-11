@@ -41,7 +41,7 @@ export default function Home() {
           onClick={() => setIsPlaying(true)}
           className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-pink-500 text-white px-8 py-4 rounded-full shadow-lg hover:bg-pink-600 transition-colors z-50 text-xl font-bold"
         >
-          CLICK ME
+          CLICK ME :)
         </button>
       )}
       <div className="flex flex-col items-center">
