@@ -8,6 +8,7 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function Home() {
   const [seconds, setSeconds] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const song = "https://www.youtube.com/watch?v=Fw2_N2mRni4";
 
@@ -20,7 +21,7 @@ export default function Home() {
       <Suspense fallback={null}>
         <ReactPlayer
           url={song}
-          playing
+          playing={isPlaying}
           loop={false}
           muted={false}
           volume={0.05}
@@ -35,8 +36,16 @@ export default function Home() {
           }}
         />
       </Suspense>
+      {!isPlaying && (
+        <button
+          onClick={() => setIsPlaying(true)}
+          className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-pink-500 text-white px-8 py-4 rounded-full shadow-lg hover:bg-pink-600 transition-colors z-50 text-xl font-bold"
+        >
+          CLICK ME
+        </button>
+      )}
       <div className="flex flex-col items-center">
-        {seconds >= 0 && seconds < 3 && (
+        {isPlaying && seconds < 3 && (
           <Image
             src="/gang.jpeg"
             alt="Gang"
