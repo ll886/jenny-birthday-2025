@@ -52,6 +52,7 @@ export default function Home() {
             width={500}
             height={500}
             className="mb-4"
+            priority
           />
         )}
         {seconds === 4 && (
@@ -61,6 +62,7 @@ export default function Home() {
             width={500}
             height={500}
             className="mb-4"
+            priority
           />
         )}
         {seconds === 5 && (
@@ -70,6 +72,7 @@ export default function Home() {
             width={500}
             height={500}
             className="mb-4"
+            priority
           />
         )}
         {seconds >= 6 && seconds < 8 && (
@@ -79,6 +82,7 @@ export default function Home() {
             width={500}
             height={500}
             className="mb-4"
+            priority
           />
         )}
         {seconds >= 8 && seconds < 12 && (
@@ -95,6 +99,7 @@ export default function Home() {
             width={500}
             height={500}
             className="mb-4"
+            priority
           />
         )}
         {seconds >= 18 && seconds < 23 && (
@@ -104,6 +109,7 @@ export default function Home() {
             width={500}
             height={500}
             className="mb-4"
+            priority
           />
         )}
         {seconds >= 23 && seconds < 27 && (
@@ -122,6 +128,7 @@ export default function Home() {
                 width={190}
                 height={200}
                 className="mr-4"
+                priority
               />
             )}
             <Image
@@ -129,6 +136,7 @@ export default function Home() {
               alt="Yours Truly"
               width={500}
               height={500}
+              priority
             />
             {seconds >= 35 && (
               <Image
@@ -137,6 +145,7 @@ export default function Home() {
                 width={190}
                 height={200}
                 className="ml-4"
+                priority
               />
             )}
           </div>
@@ -148,6 +157,7 @@ export default function Home() {
             width={300}
             height={300}
             className="mb-4"
+            priority
           />
         )}
         <div className="flex flex-col items-center text-2xl font-bold mt-4">
